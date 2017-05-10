@@ -1,0 +1,18 @@
+//
+// const mongooes = require('mongoose');
+// const shortid = require('shortid');
+// const Schema = mongooes.Schema;
+// //然后进行实例化
+// const catSchema =  new Schema({
+//     //在这里 我们可以对这个模型的数据类型进行设置
+//     _id:{
+//         type:String,
+//         default:shortid.generate//default默认给的ID
+//
+//     },
+//     name:String
+// })
+// const Cat = mongooes.model('cat',catSchema);
+// module.exports = Cat;
+
+//不需要cat.js

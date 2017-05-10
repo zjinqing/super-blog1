@@ -11,6 +11,4 @@ router.get('/',home.index);
 
 
 
-
-
 module.exports = router;
