@@ -1,6 +1,7 @@
 /**
  * Created by Administrator on 2017/5/10.
  */
+<<<<<<< HEAD
 //保存用户的信息
 const mongoose = require('mongoose');
 const shortid = require('shortid');
@@ -44,3 +45,5 @@ const UserSchema = new Schema({
 })
 const User = mongoose.model('User',UserSchema);
 module.exports=User;
+=======
+>>>>>>> a3ef8aa6e0927e803162ce3a25790fd50dbaceab

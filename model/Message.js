@@ -1,6 +1,7 @@
 /**
  * Created by Administrator on 2017/5/10.
  */
+<<<<<<< HEAD
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const shortid = require('shortid');
@@ -43,3 +44,5 @@ const MessageSchema = new Schema({
 })
 const Message = mongoose.model('Message',MessageSchema);
 module.exports = Message;
+=======
+>>>>>>> a3ef8aa6e0927e803162ce3a25790fd50dbaceab
