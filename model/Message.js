@@ -1,48 +1,45 @@
 /**
  * Created by Administrator on 2017/5/10.
  */
-<<<<<<< HEAD
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const shortid = require('shortid');
 const MessageSchema = new Schema({
-    _id:{
-        type:String,
-        default:shortid.generate,
-        unique:true
+    _id: {
+        type: String,
+        defalut: shortid.generate,
+        unique: true
     },
 //    留言的内容
-    content:{
-        type:String,
-        require:true
+    content: {
+        type: String,
+        required: true
     },
 //    留言的时间
-    createtime:{
-        type:Date,
-        default:Date.now
+    createtime: {
+        type: Date,
+        defalut: Date.now
     },
-//    留言的作者
+    //留言的作者
     author:{
         type:String,
         ref:'User'//关联用户表
     },
-//    回复
+    //回复
     replyId:{
         type:String,
         ref:'Reply'
     },
-//    留言的对应文章
+//留言的对应的文章
     articleId:{
         type:String,
         ref:'Article'
     },
-//    是否已读
+//是否已读
     has_read:{
-        type:Number,
+        type:Boolean,
         default:false
     }
 })
-const Message = mongoose.model('Message',MessageSchema);
+const Message = mongoose.model('Message', MessageSchema);
 module.exports = Message;
-=======
->>>>>>> a3ef8aa6e0927e803162ce3a25790fd50dbaceab

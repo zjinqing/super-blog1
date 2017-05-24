@@ -1,49 +1,58 @@
 /**
- * Created by Administrator on 2017/5/10.
+ * Created by hama on 2017/5/10.
  */
-<<<<<<< HEAD
-//保存用户的信息
+//保存登录用户的信息
 const mongoose = require('mongoose');
 const shortid = require('shortid');
 const Schema = mongoose.Schema;
 const UserSchema = new Schema({
-    //用户名的ID
+    //用户的ID
     _id:{
         type:String,
         default:shortid.generate,
-        unique:true//id经常会被查询，所有 把ID作为索引
+        unique:true //id经常会被查询，所以，把ID作为索引
     },
     //用户名
     name:{
         type:String,
         require:true
     },
-//    密码
-    passwrod:{
-        type:Number,
+    //密码
+    password:{
+        type:String,
         require:true
     },
-//    邮箱
+    //邮箱
     email:{
         type:String
     },
-//    个人简介 格言
+    //个人简介
     motto:{
-        type:Number,
-        default:'<--- 箭头指向处，又懒又肥'
+        type:String,
+        default:'这家伙很懒,什么都没有留下..'
     },
-//    个人头像
+    //个人头像
     avatar:{
         type:String,
-        default:'public/images/avatar.jpg'
+        default:'/public/images/avatar.jpg'
     },
-//    注册时间
+    //创建时间
     createtime:{
         type:Date,
-        default:Date.now//默认是当前时间
+        default:Date.now
     }
 })
+
+//为这个User表添加静态方法 模型上挂载方法
+UserSchema.statics.getUserByName=(name,callback)=>{
+    User.findOne({'name':name},callback)
+}
+UserSchema.statics.getUserByEmail=(email,callback)=>{
+    User.findOne({'email':email},callback)
+}
+UserSchema.statics.getUserById=(id,callback)=>{
+    User.findOne({'_id':id},callback)
+}
 const User = mongoose.model('User',UserSchema);
-module.exports=User;
-=======
->>>>>>> a3ef8aa6e0927e803162ce3a25790fd50dbaceab
+module.exports = User;
+

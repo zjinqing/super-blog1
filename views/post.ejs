@@ -1,0 +1,66 @@
+<% include indexTemplate%>
+<!--<canvas></canvas>-->
+<div class="container" style=" max-width: none; ">
+    <div class="row clearfix">
+        <div class="row clearfix" style="height: 800px;">
+            <div class="col-md-1 column"></div>
+            <div class="col-md-8 column" style="padding:0;height: 800px;border-right: 1px solid gray;padding-right: 15px;" >
+                <ul class="nav nav-tabs hovers">
+                    <h4>
+                        <li class="dropdown pull-left"><span class="glyphicon glyphicon-book"href="#" style="margin-left:10px;line-height: 43px; ">&ensp;发表</span></li>
+                    </h4>
+                </ul>
+                <br>
+                    <h3>标题</h3>
+                <form action="">
+                    <input type="text" class="form-control">
+                </form>
+                <br>
+                <!--编辑器-->
+                <h3>内容</h3>
+                <div class="aw-mod aw-replay-box">
+                    <form action="">
+                        <div class="mod-body">
+                            <div class="aw-mod aw-editor-box">
+                                <div class="mod-head" style="border:0">
+                                    <div class="wmd-panel">
+                                            <textarea id="liuyan" name="anwer_content">
+                                            </textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!--编辑器-->
+
+                <h3>添加话题</h3>
+                <input type="text" class="form-control" style="width:300px">
+                <div class="mod-body clearfix">
+                    <span class="pull-right"><a href="#" class="btn btn-normal btn-success">确认发起</a></span>
+                </div>
+            </div>
+            <div class="col-md-3 column">
+                <center>主页访问量666</center>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+<!--背景-->
+
+<script>
+    var simplemde1 = new SimpleMDE({
+        element: $("#liuyan")[0],
+        status: false,
+        styleSelectedText: false,
+    });
+
+</script>
+<!--<script type="text/javascript" src="/javascripts/beijing.js"></script>-->
+
+<% include footer%>
+
+
+

@@ -1,7 +1,7 @@
 /**
  * Created by Administrator on 2017/5/10.
  */
-<<<<<<< HEAD
+
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const shortid = require('shortid');
@@ -33,5 +33,4 @@ const ReplySchema = new Schema({
 })
 const Reply = mongoose.model('Reply',ReplySchema);
 module.exports = Reply;
-=======
->>>>>>> a3ef8aa6e0927e803162ce3a25790fd50dbaceab
+

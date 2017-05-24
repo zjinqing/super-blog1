@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title><%- title %></title>
+
+    <!--引入jquery-->
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!--引入angularJS-->
+    <script type="text/javascript" src="/angular/angular.min.js"></script>
+    <script type="text/javascript" src="/javascripts/controller.js"></script>
+    <!--编辑器-->
+    <!--<link rel="stylesheet" href="<%= locals.resource %>" />-->
+    <link rel="stylesheet" href=" /editor/dist/simplemde.min.css">
+    <script type="text/javascript" src=" /editor/dist/simplemde.min.js"></script>
+    <!--bootstrap-->
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--导航-->
+    <link rel="stylesheet" href="/stylesheets/daohang.css">
+    <!--自己的css-->
+    <link rel="stylesheet" href="/stylesheets/base.css">
+
+</head>
+<body style="background-image: url(/assets/img/backgrounds/1.jpg)">
+<content>
+    <section class="msg">
+
+    </section>
+
+
+    <menu style="z-index: 999">
+        <ul>
+            <li style="position: absolute;left:-200px;top: 15px;"><a href="/login"> <button class=" btn btn-primary">登陆</button></a></li>
+            <br>
+            <li style="position: absolute;left:-120px;top: 15px;"><a href="/reg"> <button class=" btn btn-primary">注册</button></a></li>
+        </ul>
+        <label for="trigger">
+
+            <input id="trigger" type="checkbox" />
+
+            <section class="drawer-list">
+
+                <ul>
+                    <li><a href="/">首页</a></li>
+                    <li><a href="/topic">话题</a></li>
+                    <li><a href="/post">发表</a></li>
+                    <li><a href="/set">上传</a></li>
+                    <li><a href="/reply">回复</a></li>
+                    <li><a href="/post">用户设置</a></li>
+                    <li><a href="/people">详情页面</a></li>
+                </ul>
+            </section>
+            <hamburger>
+                <i></i>
+
+            </hamburger>
+        </label>
+    </menu>
+</content>
+
+<svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+</svg>
+
+

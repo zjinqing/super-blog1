@@ -1,13 +1,13 @@
-//
+﻿//
 // const mongooes = require('mongoose');
 // const shortid = require('shortid');
 // const Schema = mongooes.Schema;
-// //Ȼ�����ʵ����
+// //Ȼ�����ʵ����
 // const catSchema =  new Schema({
-//     //������ ���ǿ��Զ����ģ�͵��������ͽ�������
+//     //������ ���ǿ��Զ����ģ�͵��������ͽ�������
 //     _id:{
 //         type:String,
-//         default:shortid.generate//defaultĬ�ϸ���ID
+//         default:shortid.generate//defaultĬ�ϸ���ID
 //
 //     },
 //     name:String
@@ -15,4 +15,27 @@
 // const Cat = mongooes.model('cat',catSchema);
 // module.exports = Cat;
 
-//����Ҫcat.js
+//����Ҫcat.js
+
+
+/**
+ * Created by Administrator on 2017/5/9.
+ */
+/*Schema  ：  一种以文件形式存储的数据库模型骨架，不具备数据库的操作能力
+
+ Model   ：  由Schema发布生成的模型，具有抽象属性和行为的数据库操作对
+
+ Entity  ：  由Model创建的实体，他的操作也会影响数据库*/
+const mongoose = require('mongoose');
+//创建模型 定义一个Schema
+const kittySchema = mongoose.Schema({
+    name: String,//定义一个属性name，为String类型
+    type:String,
+    tags:{type:[String],index:true}
+})
+//将这个模型应用到集合里面去 将Schema发布为model
+const kitten = mongoose.model('kitten', kittySchema);// 创建了一个集合kittens
+
+
+
+module.exports= kitten
